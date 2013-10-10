@@ -1,0 +1,4 @@
+Better Artwork
+Skins button is not working as intended
+Add GUI for editing config files rather than opening them in notepad
+Add logic and GUI for installing skins rather than opening default install path in explorer.
