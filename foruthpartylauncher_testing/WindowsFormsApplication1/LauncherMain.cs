@@ -45,15 +45,29 @@ namespace WindowsFormsApplication1
 
         private void Skins_Click(object sender, EventArgs e)
         {
-            Process.Start(System.IO.Path.GetDirectoryName(Application.ExecutablePath));
+            if (Environment.Is64BitOperatingSystem)
+            {
+                Process.Start(@"C:\Program Files (x86)\Cube World");
+            }
+            else
+            {
+              Process.Start(@"C:\Program Files\Cube World");
+            }
         }
 
         private void GameSettings_Click(object sender, EventArgs e)
         {
-            //Process.Start("notepad.exe", "Options.cfg");
             //this.Hide();
             GameSettings f2 = new GameSettings();
             f2.ShowDialog();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            if (Control.ModifierKeys == (Keys.Control | Keys.Shift))
+            {
+                Process.Start("http://www.youtube.com/watch?v=1QfsI77p60Q");
+            }
         }
     }
 }

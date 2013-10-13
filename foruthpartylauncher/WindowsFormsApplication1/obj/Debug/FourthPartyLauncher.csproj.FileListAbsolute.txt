@@ -7,3 +7,6 @@ c:\users\grturner\documents\visual studio 2013\Projects\WindowsFormsApplication1
 c:\users\grturner\documents\visual studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 c:\users\grturner\documents\visual studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 C:\Users\grturner\Documents\Visual Studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\FourthPartyLauncher.csprojResolveAssemblyReference.cache
+C:\Users\grturner\Documents\GitHub\cwflauncher\foruthpartylauncher\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\grturner\Documents\GitHub\cwflauncher\foruthpartylauncher\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\grturner\Documents\GitHub\cwflauncher\foruthpartylauncher\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

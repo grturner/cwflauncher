@@ -15,5 +15,4 @@ Contributors:
 Gilbert Turner aka Tech Pony
 Aristaeus
 Obsoletepotato
-
-This will no longer be worked on due to a disagreement with the CWF Administration. Anyone who would like to pick it up, feel free to. 
+Kojinus

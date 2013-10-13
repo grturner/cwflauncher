@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.WidthCustom = new System.Windows.Forms.TextBox();
-            this.HeightCustom = new System.Windows.Forms.TextBox();
             this.YaxisCheck = new System.Windows.Forms.CheckBox();
             this.FullScreenCheck = new System.Windows.Forms.CheckBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
             this.WriteConfig = new System.Windows.Forms.Button();
-            this.BackupConfig = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.Resolution = new System.Windows.Forms.ComboBox();
             this.fullScreenLabel = new System.Windows.Forms.Label();
@@ -58,6 +54,9 @@
             this.cameraSpeedList = new System.Windows.Forms.ComboBox();
             this.musicVolList = new System.Windows.Forms.ComboBox();
             this.soundVolList = new System.Windows.Forms.ComboBox();
+            this.custWidthMask = new System.Windows.Forms.MaskedTextBox();
+            this.hCustMask = new System.Windows.Forms.MaskedTextBox();
+            this.fpsLimit = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,22 +68,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(440, 130);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // WidthCustom
-            // 
-            this.WidthCustom.Location = new System.Drawing.Point(333, 211);
-            this.WidthCustom.Name = "WidthCustom";
-            this.WidthCustom.Size = new System.Drawing.Size(51, 20);
-            this.WidthCustom.TabIndex = 13;
-            this.WidthCustom.TextChanged += new System.EventHandler(this.WidthCustom_TextChanged);
-            // 
-            // HeightCustom
-            // 
-            this.HeightCustom.Location = new System.Drawing.Point(333, 237);
-            this.HeightCustom.Name = "HeightCustom";
-            this.HeightCustom.Size = new System.Drawing.Size(51, 20);
-            this.HeightCustom.TabIndex = 15;
-            this.HeightCustom.TextChanged += new System.EventHandler(this.HeightCustom_TextChanged);
             // 
             // YaxisCheck
             // 
@@ -106,13 +89,6 @@
             this.FullScreenCheck.UseVisualStyleBackColor = true;
             this.FullScreenCheck.CheckedChanged += new System.EventHandler(this.FullScreenCheck_CheckedChanged);
             // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(333, 263);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 25;
-            // 
             // WriteConfig
             // 
             this.WriteConfig.Location = new System.Drawing.Point(136, 437);
@@ -122,16 +98,6 @@
             this.WriteConfig.Text = "Write New";
             this.WriteConfig.UseVisualStyleBackColor = true;
             this.WriteConfig.Click += new System.EventHandler(this.WriteConfig_Click);
-            // 
-            // BackupConfig
-            // 
-            this.BackupConfig.Location = new System.Drawing.Point(27, 437);
-            this.BackupConfig.Name = "BackupConfig";
-            this.BackupConfig.Size = new System.Drawing.Size(103, 23);
-            this.BackupConfig.TabIndex = 27;
-            this.BackupConfig.Text = "Backup Current";
-            this.BackupConfig.UseVisualStyleBackColor = true;
-            this.BackupConfig.Click += new System.EventHandler(this.BackupConfig_Click);
             // 
             // Back
             // 
@@ -148,15 +114,15 @@
             this.Resolution.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Resolution.FormattingEnabled = true;
             this.Resolution.Items.AddRange(new object[] {
-            "1024 x 768",
+            "Custom",
+            "1920 x 1200",
+            "1920 x 1080",
+            "1440 x 900",
+            "1366 x 768",
             "1280 x 1024",
             "1280 x 720",
-            "1366 x 768",
-            "1440 x 900",
-            "1920 x 1080",
-            "1920 x 1200",
-            "800 x 600",
-            "Custom"});
+            "1024 x 768",
+            "800 x 600"});
             this.Resolution.Location = new System.Drawing.Point(122, 211);
             this.Resolution.Name = "Resolution";
             this.Resolution.Size = new System.Drawing.Size(121, 21);
@@ -330,6 +296,7 @@
             this.renderDistanceList.Name = "renderDistanceList";
             this.renderDistanceList.Size = new System.Drawing.Size(121, 21);
             this.renderDistanceList.TabIndex = 47;
+            this.renderDistanceList.SelectedIndexChanged += new System.EventHandler(this.renderDistanceList_SelectedIndexChanged);
             // 
             // cameraSmoothList
             // 
@@ -361,6 +328,7 @@
             this.cameraSmoothList.Name = "cameraSmoothList";
             this.cameraSmoothList.Size = new System.Drawing.Size(121, 21);
             this.cameraSmoothList.TabIndex = 48;
+            this.cameraSmoothList.SelectedIndexChanged += new System.EventHandler(this.cameraSmoothList_SelectedIndexChanged);
             // 
             // cameraSpeedList
             // 
@@ -390,6 +358,7 @@
             this.cameraSpeedList.Name = "cameraSpeedList";
             this.cameraSpeedList.Size = new System.Drawing.Size(121, 21);
             this.cameraSpeedList.TabIndex = 49;
+            this.cameraSpeedList.SelectedIndexChanged += new System.EventHandler(this.cameraSpeedList_SelectedIndexChanged);
             // 
             // musicVolList
             // 
@@ -411,27 +380,68 @@
             this.musicVolList.Name = "musicVolList";
             this.musicVolList.Size = new System.Drawing.Size(121, 21);
             this.musicVolList.TabIndex = 50;
+            this.musicVolList.SelectedIndexChanged += new System.EventHandler(this.musicVolList_SelectedIndexChanged);
             // 
             // soundVolList
             // 
             this.soundVolList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.soundVolList.FormattingEnabled = true;
             this.soundVolList.Items.AddRange(new object[] {
-            "100%",
-            "90%",
-            "80%",
-            "70%",
-            "60%",
-            "50%",
-            "40%",
-            "30%",
-            "20%",
-            "10%",
-            "Disabled"});
+            "100",
+            "90",
+            "80",
+            "70",
+            "60",
+            "50",
+            "40",
+            "30",
+            "20",
+            "10",
+            "0"});
             this.soundVolList.Location = new System.Drawing.Point(121, 374);
             this.soundVolList.Name = "soundVolList";
             this.soundVolList.Size = new System.Drawing.Size(121, 21);
             this.soundVolList.TabIndex = 51;
+            this.soundVolList.SelectedIndexChanged += new System.EventHandler(this.soundVolList_SelectedIndexChanged);
+            // 
+            // custWidthMask
+            // 
+            this.custWidthMask.Location = new System.Drawing.Point(333, 211);
+            this.custWidthMask.Name = "custWidthMask";
+            this.custWidthMask.Size = new System.Drawing.Size(51, 20);
+            this.custWidthMask.TabIndex = 52;
+            this.custWidthMask.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.custWidthMask_MaskInputRejected);
+            // 
+            // hCustMask
+            // 
+            this.hCustMask.Location = new System.Drawing.Point(333, 237);
+            this.hCustMask.Name = "hCustMask";
+            this.hCustMask.RejectInputOnFirstFailure = true;
+            this.hCustMask.Size = new System.Drawing.Size(51, 20);
+            this.hCustMask.TabIndex = 53;
+            this.hCustMask.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.hCustMask_MaskInputRejected);
+            // 
+            // fpsLimit
+            // 
+            this.fpsLimit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.fpsLimit.FormattingEnabled = true;
+            this.fpsLimit.Items.AddRange(new object[] {
+            "Unlimited",
+            "1000",
+            "500",
+            "250",
+            "166",
+            "100",
+            "76",
+            "58",
+            "40",
+            "30",
+            "20"});
+            this.fpsLimit.Location = new System.Drawing.Point(333, 264);
+            this.fpsLimit.Name = "fpsLimit";
+            this.fpsLimit.Size = new System.Drawing.Size(100, 21);
+            this.fpsLimit.TabIndex = 55;
+            this.fpsLimit.SelectedIndexChanged += new System.EventHandler(this.fpsLimit_SelectedIndexChanged);
             // 
             // GameSettings
             // 
@@ -439,6 +449,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 472);
+            this.Controls.Add(this.fpsLimit);
+            this.Controls.Add(this.hCustMask);
+            this.Controls.Add(this.custWidthMask);
             this.Controls.Add(this.soundVolList);
             this.Controls.Add(this.musicVolList);
             this.Controls.Add(this.cameraSpeedList);
@@ -461,13 +474,9 @@
             this.Controls.Add(this.fullScreenLabel);
             this.Controls.Add(this.Resolution);
             this.Controls.Add(this.Back);
-            this.Controls.Add(this.BackupConfig);
             this.Controls.Add(this.WriteConfig);
-            this.Controls.Add(this.textBox16);
             this.Controls.Add(this.FullScreenCheck);
             this.Controls.Add(this.YaxisCheck);
-            this.Controls.Add(this.HeightCustom);
-            this.Controls.Add(this.WidthCustom);
             this.Controls.Add(this.pictureBox1);
             this.Name = "GameSettings";
             this.Text = "Game Settings";
@@ -481,13 +490,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox WidthCustom;
-        private System.Windows.Forms.TextBox HeightCustom;
         private System.Windows.Forms.CheckBox YaxisCheck;
         private System.Windows.Forms.CheckBox FullScreenCheck;
-        private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Button WriteConfig;
-        private System.Windows.Forms.Button BackupConfig;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.ComboBox Resolution;
         private System.Windows.Forms.Label fullScreenLabel;
@@ -510,5 +515,8 @@
         private System.Windows.Forms.ComboBox cameraSpeedList;
         private System.Windows.Forms.ComboBox musicVolList;
         private System.Windows.Forms.ComboBox soundVolList;
+        private System.Windows.Forms.MaskedTextBox custWidthMask;
+        private System.Windows.Forms.MaskedTextBox hCustMask;
+        private System.Windows.Forms.ComboBox fpsLimit;
     }
 }
