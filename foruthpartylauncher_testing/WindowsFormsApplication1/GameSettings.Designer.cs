@@ -54,9 +54,9 @@
             this.cameraSpeedList = new System.Windows.Forms.ComboBox();
             this.musicVolList = new System.Windows.Forms.ComboBox();
             this.soundVolList = new System.Windows.Forms.ComboBox();
-            this.custWidthMask = new System.Windows.Forms.MaskedTextBox();
-            this.hCustMask = new System.Windows.Forms.MaskedTextBox();
             this.fpsLimit = new System.Windows.Forms.ComboBox();
+            this.widthCust = new System.Windows.Forms.TextBox();
+            this.heightCust = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -404,23 +404,6 @@
             this.soundVolList.TabIndex = 51;
             this.soundVolList.SelectedIndexChanged += new System.EventHandler(this.soundVolList_SelectedIndexChanged);
             // 
-            // custWidthMask
-            // 
-            this.custWidthMask.Location = new System.Drawing.Point(333, 211);
-            this.custWidthMask.Name = "custWidthMask";
-            this.custWidthMask.Size = new System.Drawing.Size(51, 20);
-            this.custWidthMask.TabIndex = 52;
-            this.custWidthMask.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.custWidthMask_MaskInputRejected);
-            // 
-            // hCustMask
-            // 
-            this.hCustMask.Location = new System.Drawing.Point(333, 237);
-            this.hCustMask.Name = "hCustMask";
-            this.hCustMask.RejectInputOnFirstFailure = true;
-            this.hCustMask.Size = new System.Drawing.Size(51, 20);
-            this.hCustMask.TabIndex = 53;
-            this.hCustMask.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.hCustMask_MaskInputRejected);
-            // 
             // fpsLimit
             // 
             this.fpsLimit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -443,15 +426,34 @@
             this.fpsLimit.TabIndex = 55;
             this.fpsLimit.SelectedIndexChanged += new System.EventHandler(this.fpsLimit_SelectedIndexChanged);
             // 
+            // widthCust
+            // 
+            this.widthCust.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.widthCust.Location = new System.Drawing.Point(333, 211);
+            this.widthCust.Name = "widthCust";
+            this.widthCust.Size = new System.Drawing.Size(100, 20);
+            this.widthCust.TabIndex = 56;
+            this.widthCust.TextChanged += new System.EventHandler(this.widthCust_TextChanged);
+            this.widthCust.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.widthCust_KeyPress_1);
+            // 
+            // heightCust
+            // 
+            this.heightCust.Location = new System.Drawing.Point(333, 238);
+            this.heightCust.Name = "heightCust";
+            this.heightCust.Size = new System.Drawing.Size(100, 20);
+            this.heightCust.TabIndex = 57;
+            this.heightCust.TextChanged += new System.EventHandler(this.heightCust_TextChanged);
+            this.heightCust.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.heightCust_KeyPress);
+            // 
             // GameSettings
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 472);
+            this.Controls.Add(this.heightCust);
+            this.Controls.Add(this.widthCust);
             this.Controls.Add(this.fpsLimit);
-            this.Controls.Add(this.hCustMask);
-            this.Controls.Add(this.custWidthMask);
             this.Controls.Add(this.soundVolList);
             this.Controls.Add(this.musicVolList);
             this.Controls.Add(this.cameraSpeedList);
@@ -515,8 +517,8 @@
         private System.Windows.Forms.ComboBox cameraSpeedList;
         private System.Windows.Forms.ComboBox musicVolList;
         private System.Windows.Forms.ComboBox soundVolList;
-        private System.Windows.Forms.MaskedTextBox custWidthMask;
-        private System.Windows.Forms.MaskedTextBox hCustMask;
         private System.Windows.Forms.ComboBox fpsLimit;
+        private System.Windows.Forms.TextBox widthCust;
+        private System.Windows.Forms.TextBox heightCust;
     }
 }

@@ -66,7 +66,7 @@ namespace WindowsFormsApplication1
         {
             if (Control.ModifierKeys == (Keys.Control | Keys.Shift))
             {
-                Process.Start("http://www.youtube.com/watch?v=1QfsI77p60Q");
+                Process.Start("http://www.youtube.com/watch?v=AvIPMHcCCY0");
             }
         }
     }

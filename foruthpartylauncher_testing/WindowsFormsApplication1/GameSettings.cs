@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
         {
 
         }
-        //Va riable Declaration
+        //Variable Declaration
         int yAxis;
         int fullScreen;
         int width;
@@ -35,13 +35,39 @@ namespace WindowsFormsApplication1
         int cSpeed;
         int mVol;
         int sVol;
-        string wCust;
-        string hCust;
+        int wCust;
+        int hCust;
         int fpsLim;
 
         private void Back_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void widthCust_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar !='\b'))
+            {
+                MessageBox.Show("Numbers Only!");
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void heightCust_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != '\b'))
+            {
+                MessageBox.Show("Numbers Only!");
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = false;
+            }
         }
 
         private void FullScreenCheck_CheckedChanged(object sender, EventArgs e)
@@ -56,16 +82,6 @@ namespace WindowsFormsApplication1
             else { yAxis = 0; }
         }
 
-        private void custWidthMask_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            wCust = custWidthMask.Text;
-        }
-
-        private void hCustMask_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            hCust = hCustMask.Text;
-        }
-        
         private void antialiasingBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (antialiasingBox.SelectedIndex)
@@ -481,6 +497,16 @@ namespace WindowsFormsApplication1
             tw.WriteLine(iY);
             tw.WriteLine(fLim);
             }
+        }
+
+        private void widthCust_TextChanged(object sender, EventArgs e)
+        {
+            int.TryParse(widthCust.Text, out wCust);
+        }
+
+        private void heightCust_TextChanged(object sender, EventArgs e)
+        {
+            int.TryParse(heightCust.Text, out hCust);
         }
     }
 }
