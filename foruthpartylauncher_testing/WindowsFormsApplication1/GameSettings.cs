@@ -469,6 +469,7 @@ namespace WindowsFormsApplication1
             wRes = "resolutionX " + width;
             hRes = "resolutionY " + height;
             }
+            string antAlias = "antiAliasing " + antiAlias;
             string fScreen = "fullScreen " + fullScreen;
             string rDis = "renderDistance " + rDist;
             string sV = "soundVolume " + sVol;
@@ -489,6 +490,7 @@ namespace WindowsFormsApplication1
             tw.WriteLine(fScreen);
             tw.WriteLine(wRes);
             tw.WriteLine(hRes);
+            tw.WriteLine(antAlias);
             tw.WriteLine(rDis);
             tw.WriteLine(sV);
             tw.WriteLine(mV);

@@ -35,7 +35,9 @@ namespace WindowsFormsApplication1
 
         private void ServerSettings_Click(object sender, EventArgs e)
         {
-            Process.Start("notepad.exe", "server.cfg");
+            //Process.Start("notepad.exe", "server.cfg");
+            ServerSettings f3 = new ServerSettings();
+            f3.ShowDialog();
         }
 
         private void ServerLaunch_Click(object sender, EventArgs e)
@@ -66,7 +68,7 @@ namespace WindowsFormsApplication1
         {
             if (Control.ModifierKeys == (Keys.Control | Keys.Shift))
             {
-                Process.Start("http://www.youtube.com/watch?v=AvIPMHcCCY0");
+                Process.Start("http://www.youtube.com/watch?v=SdUGTKF8MEE");
             }
         }
     }

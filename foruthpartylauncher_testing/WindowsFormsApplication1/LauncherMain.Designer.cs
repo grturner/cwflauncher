@@ -139,16 +139,16 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 13);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Version 0.002a_r42";
+            this.label2.Text = "Version 0.003a_r42";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(115, 211);
+            this.label3.Location = new System.Drawing.Point(95, 212);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 13);
+            this.label3.Size = new System.Drawing.Size(267, 13);
             this.label3.TabIndex = 14;
-            this.label3.Text = "By Tech Pony, Aristaeus, Obsoletepotato, et al";
+            this.label3.Text = "By Tech Pony, Aristaeus, Obsoletepotato, Kojinus, et al";
             // 
             // label4
             // 
