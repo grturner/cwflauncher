@@ -18,3 +18,8 @@ C:\Users\grturner\Documents\GitHub\cwflauncher\foruthpartylauncher_testing\Windo
 C:\Users\grturner\Documents\GitHub\cwflauncher\foruthpartylauncher_testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\grturner\Documents\GitHub\cwflauncher\foruthpartylauncher_testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 C:\Users\grturner\Documents\GitHub\cwflauncher\foruthpartylauncher_testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ServerSettings.resources
+C:\Users\grturner\Documents\GitHub\cwflauncher\foruthpartylauncher_testing\WindowsFormsApplication1\obj\Debug\FourthPartyLauncher.csprojResolveAssemblyReference.cache
+C:\Users\grturner\Documents\GitHub\cwflauncher\foruthpartylauncher_testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.aboutPage.resources
+C:\Users\grturner\Documents\GitHub\cwflauncher\foruthpartylauncher_testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.BackupForm.resources
+C:\Users\grturner\Documents\GitHub\cwflauncher\foruthpartylauncher_testing\WindowsFormsApplication1\bin\Debug\Ionic.Zip.dll
+C:\Users\grturner\Documents\GitHub\cwflauncher\foruthpartylauncher_testing\WindowsFormsApplication1\obj\Debug\AssetBrowser.MainForm.resources

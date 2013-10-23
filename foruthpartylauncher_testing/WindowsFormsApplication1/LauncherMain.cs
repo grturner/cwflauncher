@@ -47,14 +47,16 @@ namespace WindowsFormsApplication1
 
         private void Skins_Click(object sender, EventArgs e)
         {
-            if (Environment.Is64BitOperatingSystem)
-            {
-                Process.Start(@"C:\Program Files (x86)\Cube World");
-            }
-            else
-            {
-              Process.Start(@"C:\Program Files\Cube World");
-            }
+            //if (Environment.Is64BitOperatingSystem)
+            //{
+            //    Process.Start(@"C:\Program Files (x86)\Cube World");
+            //}
+            //else
+            //{
+            //  Process.Start(@"C:\Program Files\Cube World");
+            //}
+            AssetBrowser.MainForm e2 = new AssetBrowser.MainForm();
+            e2.ShowDialog();
         }
 
         private void GameSettings_Click(object sender, EventArgs e)
@@ -70,6 +72,18 @@ namespace WindowsFormsApplication1
             {
                 Process.Start("http://www.youtube.com/watch?v=SdUGTKF8MEE");
             }
+        }
+
+        private void aboutButton_Click(object sender, EventArgs e)
+        {
+            aboutPage h2 = new aboutPage();
+            h2.ShowDialog();
+        }
+
+        private void backupButton_Click(object sender, EventArgs e)
+        {
+            BackupForm e2 = new BackupForm();
+            e2.ShowDialog();
         }
     }
 }
