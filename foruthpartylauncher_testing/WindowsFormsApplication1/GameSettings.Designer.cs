@@ -127,6 +127,7 @@
             this.Resolution.Name = "Resolution";
             this.Resolution.Size = new System.Drawing.Size(121, 21);
             this.Resolution.TabIndex = 31;
+            this.Resolution.SelectedIndex = 1;
             this.Resolution.SelectedIndexChanged += new System.EventHandler(this.Resolution_SelectedIndexChanged);
             // 
             // fullScreenLabel
@@ -222,6 +223,7 @@
             this.antialiasingBox.Name = "antialiasingBox";
             this.antialiasingBox.Size = new System.Drawing.Size(121, 21);
             this.antialiasingBox.TabIndex = 41;
+            this.antialiasingBox.SelectedIndex = 0;
             this.antialiasingBox.SelectedIndexChanged += new System.EventHandler(this.antialiasingBox1_SelectedIndexChanged);
             // 
             // label1
@@ -296,6 +298,7 @@
             this.renderDistanceList.Name = "renderDistanceList";
             this.renderDistanceList.Size = new System.Drawing.Size(121, 21);
             this.renderDistanceList.TabIndex = 47;
+            this.renderDistanceList.SelectedIndex = 0;
             this.renderDistanceList.SelectedIndexChanged += new System.EventHandler(this.renderDistanceList_SelectedIndexChanged);
             // 
             // cameraSmoothList
@@ -328,6 +331,7 @@
             this.cameraSmoothList.Name = "cameraSmoothList";
             this.cameraSmoothList.Size = new System.Drawing.Size(121, 21);
             this.cameraSmoothList.TabIndex = 48;
+            this.cameraSmoothList.SelectedIndex = 0;
             this.cameraSmoothList.SelectedIndexChanged += new System.EventHandler(this.cameraSmoothList_SelectedIndexChanged);
             // 
             // cameraSpeedList
@@ -358,6 +362,7 @@
             this.cameraSpeedList.Name = "cameraSpeedList";
             this.cameraSpeedList.Size = new System.Drawing.Size(121, 21);
             this.cameraSpeedList.TabIndex = 49;
+            this.cameraSpeedList.SelectedIndex = 0;
             this.cameraSpeedList.SelectedIndexChanged += new System.EventHandler(this.cameraSpeedList_SelectedIndexChanged);
             // 
             // musicVolList
@@ -380,6 +385,7 @@
             this.musicVolList.Name = "musicVolList";
             this.musicVolList.Size = new System.Drawing.Size(121, 21);
             this.musicVolList.TabIndex = 50;
+            this.musicVolList.SelectedIndex = 0;
             this.musicVolList.SelectedIndexChanged += new System.EventHandler(this.musicVolList_SelectedIndexChanged);
             // 
             // soundVolList
@@ -402,6 +408,7 @@
             this.soundVolList.Name = "soundVolList";
             this.soundVolList.Size = new System.Drawing.Size(121, 21);
             this.soundVolList.TabIndex = 51;
+            this.soundVolList.SelectedIndex = 0;
             this.soundVolList.SelectedIndexChanged += new System.EventHandler(this.soundVolList_SelectedIndexChanged);
             // 
             // fpsLimit
@@ -424,10 +431,12 @@
             this.fpsLimit.Name = "fpsLimit";
             this.fpsLimit.Size = new System.Drawing.Size(100, 21);
             this.fpsLimit.TabIndex = 55;
+            this.fpsLimit.SelectedIndex = 0;
             this.fpsLimit.SelectedIndexChanged += new System.EventHandler(this.fpsLimit_SelectedIndexChanged);
             // 
             // widthCust
-            // 
+            //
+            this.widthCust.Enabled = false;
             this.widthCust.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.widthCust.Location = new System.Drawing.Point(333, 211);
             this.widthCust.Name = "widthCust";
@@ -437,7 +446,8 @@
             this.widthCust.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.widthCust_KeyPress_1);
             // 
             // heightCust
-            // 
+            //
+            this.heightCust.Enabled = false;
             this.heightCust.Location = new System.Drawing.Point(333, 238);
             this.heightCust.Name = "heightCust";
             this.heightCust.Size = new System.Drawing.Size(100, 20);

@@ -38,7 +38,8 @@ namespace WindowsFormsApplication1
         int wCust;
         int hCust;
         int fpsLim;
-
+        
+       
         private void Back_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -143,6 +144,18 @@ namespace WindowsFormsApplication1
                     width = 800;
                     height = 600;
                     break;
+            }
+            if (width == -1 || height == -1)
+            {
+                this.heightCust.Enabled = true;
+                this.widthCust.Enabled = true;
+            }
+            else
+            {
+                this.heightCust.Text = "";
+                this.widthCust.Text = "";
+                this.heightCust.Enabled = false;
+                this.widthCust.Enabled = false;
             }
         }
 

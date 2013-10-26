@@ -52,17 +52,24 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-            if (File.Exists("server.cfg"))
+            if (this.seedTextBox.Text == "")
             {
-                if (File.Exists("server.cfg.bak")) { File.Delete("server.cfg.bak"); }
-                File.Move("server.cfg", "server.cfg.bak");
+                MessageBox.Show("Please insert a valid seed");
             }
-
-            using (StreamWriter tw = new StreamWriter("server.cfg"))
+            else
             {
-                tw.WriteLine(seedTextBox.Text);
+                if (File.Exists("server.cfg"))
+                {
+                    if (File.Exists("server.cfg.bak")) { File.Delete("server.cfg.bak"); }
+                    File.Move("server.cfg", "server.cfg.bak");
+                }
+
+                using (StreamWriter tw = new StreamWriter("server.cfg"))
+                {
+                    tw.WriteLine(seedTextBox.Text);
+                }
             }
-        }
+                
+       }
     }
 }
