@@ -34,6 +34,8 @@
             this.backupButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.openBackupDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.chooseBackupButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +83,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 255);
+            this.label2.Location = new System.Drawing.Point(68, 276);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(321, 13);
             this.label2.TabIndex = 5;
@@ -90,17 +92,32 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(69, 274);
+            this.label3.Location = new System.Drawing.Point(69, 295);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(319, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Disclaimer: This will only backup the contents of your Save folder. ";
+            // 
+            // openBackupDialog1
+            // 
+            this.openBackupDialog1.FileName = "openBackupDialog1";
+            // 
+            // chooseBackupButton
+            // 
+            this.chooseBackupButton.Location = new System.Drawing.Point(172, 231);
+            this.chooseBackupButton.Name = "chooseBackupButton";
+            this.chooseBackupButton.Size = new System.Drawing.Size(113, 23);
+            this.chooseBackupButton.TabIndex = 7;
+            this.chooseBackupButton.Text = "Restore Backup";
+            this.chooseBackupButton.UseVisualStyleBackColor = true;
+            this.chooseBackupButton.Click += new System.EventHandler(this.chooseBackupButton_Click);
             // 
             // BackupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 472);
+            this.Controls.Add(this.chooseBackupButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.backupButton);
@@ -123,5 +140,7 @@
         private System.Windows.Forms.Button backupButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.OpenFileDialog openBackupDialog1;
+        private System.Windows.Forms.Button chooseBackupButton;
     }
 }
